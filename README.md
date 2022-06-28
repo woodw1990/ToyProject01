@@ -11,4 +11,4 @@
 
 2. server
 
-3. view (python)
+3. view (python / PyQt5)
