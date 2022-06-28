@@ -7,7 +7,7 @@
 <a href = "https://www.notion.so/4f742001ce784dc2b96f9a166e42739e?v=7bf6de1c574340caa8812bd5b08779df" target="_blank"> Notion </a>
 
 # Summary
-1. db (Oracle Cloud / Ubuntu )
+1. db (Oracle Cloud )
 
 2. server
 
