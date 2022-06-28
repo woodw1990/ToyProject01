@@ -7,8 +7,8 @@
 <a href = "https://www.notion.so/4f742001ce784dc2b96f9a166e42739e?v=7bf6de1c574340caa8812bd5b08779df" target="_blank"> Notion </a>
 
 # Summary
-1. db
+1. db (Oracle Cloud / Ubuntu )
 
 2. server
 
-3. view 
+3. view (python)
