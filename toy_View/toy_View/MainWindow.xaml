@@ -1,0 +1,81 @@
+﻿<Window x:Class="toy_View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:toy_View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="779.837" Width="1610.491">
+    <StackPanel x:Name="dock1">
+        <StackPanel x:Name="dock2" Margin="5,5,5,5"    Width="auto">
+            <DockPanel Margin="5">
+                <Grid Height="170">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="500" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <!-- grid column 1 내용 -->
+                    <StackPanel Grid.Column="0" Orientation="Vertical" >
+                        <StackPanel Height="50" Orientation="Horizontal" >
+                            <DockPanel  Width="210" Margin="5,5,0,5" Background="#FF3BA8FF"  >
+                                <RadioButton  Margin="5,13,0,10" Width="60" FontSize="13" Foreground="#ffffff">요청일</RadioButton>
+                                <RadioButton  Margin="5,13,0,10" Width="60" FontSize="13" Foreground="#ffffff">접수일</RadioButton>
+                                <RadioButton  Margin="5,13,0,10" Width="60" FontSize="13" Foreground="#ffffff">처리일</RadioButton>
+                            </DockPanel>
+                            <DatePicker Margin="5,13,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDateChanged="dtp_SelectedDateChanged" />
+                            <TextBlock Text="~" Margin="5,13,0,0" TextAlignment="Center" Width="20"></TextBlock>
+                            <DatePicker Margin="5,13,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDateChanged="dtp_SelectedDateChanged" />
+                        </StackPanel>
+                        <StackPanel Height="40" Orientation="Horizontal" >
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 요청자"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <TextBox Width="125" Margin="0,5,0,5"></TextBox>
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 접수자"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <TextBox Width="125" Margin="0,5,0,5"></TextBox>
+                        </StackPanel>
+                        <StackPanel Height="40" Orientation="Horizontal" >
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 요청내용"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <TextBox Width="370" Margin="0,5,0,5"></TextBox>
+                        </StackPanel>
+                        <StackPanel Height="40" Orientation="Horizontal" >
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 병원"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <TextBox Width="230" Margin="0,5,0,5"></TextBox>
+                            <Button Width="80" Margin="5" FontSize="15">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                                Clear</Button>
+                            <Button Width="50" Margin="0,5" FontSize="15">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                                …</Button>
+                        </StackPanel>
+                    
+                    </StackPanel>
+                    
+                    <StackPanel Grid.Column="1">
+                        
+                     </StackPanel> 
+                </Grid>
+               
+            </DockPanel>
+
+        </StackPanel>
+        <StackPanel x:Name="dock3" Margin ="5,5,5,5"  Width="auto">
+            <GroupBox Margin="5,5,5,5" Padding ="250"></GroupBox>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
