@@ -9,6 +9,6 @@
 # Summary
 1. db (Oracle Cloud) :
 
-2. server :
+2. server (Python) :
 
-3. view (C#) :
+3. view (C# / WPF) :
