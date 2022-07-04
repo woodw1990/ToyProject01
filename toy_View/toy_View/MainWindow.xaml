@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:toy_View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="779.837" Width="1610.491">
-    <StackPanel x:Name="dock1">
+        Title="MainWindow" Height="779.837" Width="1792.899">
+      <StackPanel x:Name="dock1">
         <StackPanel x:Name="dock2" Margin="5,5,5,5"    Width="auto">
-            <DockPanel Margin="5">
+            <DockPanel>
+                <Menu DockPanel.Dock="top">
+                    <MenuItem Header="접수관리"/>
+                </Menu>
+            </DockPanel> 
+                
+                <DockPanel Margin="5">
                 <Grid Height="170">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="500" />
@@ -17,14 +23,14 @@
                     <!-- grid column 1 내용 -->
                     <StackPanel Grid.Column="0" Orientation="Vertical" >
                         <StackPanel Height="50" Orientation="Horizontal" >
-                            <DockPanel  Width="210" Margin="5,5,0,5" Background="#FF3BA8FF"  >
-                                <RadioButton  Margin="5,13,0,10" Width="60" FontSize="13" Foreground="#ffffff">요청일</RadioButton>
-                                <RadioButton  Margin="5,13,0,10" Width="60" FontSize="13" Foreground="#ffffff">접수일</RadioButton>
-                                <RadioButton  Margin="5,13,0,10" Width="60" FontSize="13" Foreground="#ffffff">처리일</RadioButton>
+                            <DockPanel  Width="210" Margin="5,7,0,7" Background="#FF3BA8FF"  >
+                                <RadioButton  Margin="4,12,0,0" Width="60" FontSize="14" Foreground="#ffffff">요청일</RadioButton>
+                                <RadioButton  Margin="4,12,0,0" Width="60" FontSize="14" Foreground="#ffffff">접수일</RadioButton>
+                                <RadioButton  Margin="4,12,0,0" Width="60" FontSize="14" Foreground="#ffffff">처리일</RadioButton>
                             </DockPanel>
-                            <DatePicker Margin="5,13,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDateChanged="dtp_SelectedDateChanged" />
+                            <DatePicker Margin="5,13,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
                             <TextBlock Text="~" Margin="5,13,0,0" TextAlignment="Center" Width="20"></TextBlock>
-                            <DatePicker Margin="5,13,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDateChanged="dtp_SelectedDateChanged" />
+                            <DatePicker Margin="5,13,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" />
                         </StackPanel>
                         <StackPanel Height="40" Orientation="Horizontal" >
                             <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
@@ -66,15 +72,88 @@
                     </StackPanel>
                     
                     <StackPanel Grid.Column="1">
-                        
-                     </StackPanel> 
+                        <StackPanel Height="50" Orientation="Horizontal" >
+                            
+                            
+                        </StackPanel>
+                        <StackPanel Height="40" Orientation="Horizontal" >
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 처리자"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <TextBox Width="125" Margin="0,5,0,5"></TextBox>
+
+                        </StackPanel>
+                        <StackPanel Height="40" Orientation="Horizontal" >
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 처리내용"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <TextBox Width="400" Margin="0,5,0,5"></TextBox>
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 처리유형"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <ComboBox Width="125" Margin="0,5,0,5">
+                                <ComboBoxItem Content="[E] 설명"/>
+                                <ComboBoxItem Content="[A] 추가개발"/>
+                                <ComboBoxItem Content="[D] 데이터변경"/>
+                                <ComboBoxItem Content="[R] 재설치"/>
+                                <ComboBoxItem Content="[O] Other"/>
+                             </ComboBox>
+
+                        </StackPanel>
+                        <StackPanel Height="40" Orientation="Horizontal" >
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 구분"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <ComboBox Width="125" Margin="0,5,0,5">
+                                <ComboBoxItem Content="[N] 일반"/>
+                                <ComboBoxItem Content="[E] 설치"/>
+                                <ComboBoxItem Content="[D] 개발"/>
+                                <ComboBoxItem Content="[O] Other"/>
+
+                            </ComboBox>
+                            <DockPanel Width="110" Margin="5" Background="#FF3BA8FF">
+                                <TextBlock Text="■ 화면 구분"  Width="100"   VerticalAlignment ="center" HorizontalAlignment="Center" Foreground="#ffffff" FontSize="15" />
+                            </DockPanel>
+                            <ComboBox Width="125" Margin="0,5,0,5">
+                                <ComboBoxItem Content="[O] 처방"/>
+                                <ComboBoxItem Content="[C] 채혈"/>
+                                <ComboBoxItem Content="[T] 접수"/>
+                                <ComboBoxItem Content="[R] 결과"/>
+                                <ComboBoxItem Content="[S] 조회"/>
+                                <ComboBoxItem Content="[O] Other"/>
+                            </ComboBox>
+
+                        </StackPanel>
+                    </StackPanel> 
                 </Grid>
                
             </DockPanel>
 
         </StackPanel>
-        <StackPanel x:Name="dock3" Margin ="5,5,5,5"  Width="auto">
-            <GroupBox Margin="5,5,5,5" Padding ="250"></GroupBox>
+        <StackPanel x:Name="dock3" Margin ="5,5,5,5" Width="auto">
+            <Grid Margin="5" MinHeight="500">
+                 <DataGrid Name="DataG" MinHeight="500" Height="auto" Margin="5">
+                    gridview.ScrollIntoView(gridview.Items[gridview.Items.Count - 1]);
+                    
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="구분" Width ="80"  Binding="{Binding Division}"/>
+                        <DataGridTextColumn Header="병원명" Width ="160" Binding="{Binding HospitalName}"/>
+                        <DataGridTextColumn Header="요청일" Width ="100" Binding="{Binding RequestDate}"/>
+                        <DataGridTextColumn Header="요청자" Width ="90" Binding="{Binding Requester}"/>
+                        <DataGridTextColumn Header="요청자 연락처" Width ="150" Binding="{Binding RequesterTell}"/>
+                        <DataGridTextColumn Header="요청내용" Width ="400" Binding="{Binding RequestText}"/>
+                        <DataGridTextColumn Header="접수자" Width ="90" Binding="{Binding Receptionist}"/>
+                        <DataGridTextColumn Header="접수일" Width ="100" Binding="{Binding TakeDate}"/>
+                        <DataGridTextColumn Header="처리자" Width ="90" Binding="{Binding Manager}"/>
+                        <DataGridTextColumn Header="처리내용" Width ="400" Binding="{Binding ProcessingDetail}"/>
+                        <DataGridTextColumn Header="처리유형" Width ="100" Binding="{Binding ProcessingType}"/>
+                        <DataGridTextColumn Header="화면구분" Width ="100" Binding="{Binding ScreenDivision}"/>
+                        <DataGridTextColumn Header="시작일" Width ="100" Binding="{Binding StartDate}"/>
+                        <DataGridTextColumn Header="종료일" Width ="100" Binding="{Binding EndDate}"/>
+                    </DataGrid.Columns>
+                    
+                </DataGrid>
+            </Grid>
         </StackPanel>
 
     </StackPanel>
