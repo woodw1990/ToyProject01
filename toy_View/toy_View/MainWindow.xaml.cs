@@ -24,5 +24,20 @@ namespace toy_View
         {
             InitializeComponent();
         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSeclect_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
