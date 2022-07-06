@@ -7,7 +7,9 @@
 <a href = "https://www.notion.so/4f742001ce784dc2b96f9a166e42739e?v=7bf6de1c574340caa8812bd5b08779df" target="_blank"> Notion </a>
 
 # Summary
-1. db (Oracle Cloud) :
+1. db (Naver Cloud) <br>
+![image](https://user-images.githubusercontent.com/103009998/177477566-65124bcc-6ec1-44e8-96de-fe0249d2bd86.png)
+
 
 2. server (Python) :
 
